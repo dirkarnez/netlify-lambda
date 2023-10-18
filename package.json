@@ -10,6 +10,6 @@
     "lambda-build": "netlify-lambda build functions"
   },
   "devDependencies": {
-    "netlify-lambda": "^2.0.16"
+    "netlify-lambda": "^2.0.15"
   }
 }
