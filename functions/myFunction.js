@@ -8,11 +8,8 @@ const pdfPath = 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examp
 
 
 exports.handler = async function () {
- // Read the PDF file
- const pdfBuffer = fs.readFileSync(pdfPath);
-
  // Load the PDF document
- const pdfDoc = await PDFDocument.load(pdfBuffer);
+ const pdfDoc = await PDFDocument.load(pdfPath);
 
  // Fetch the first page of the PDF
  const [firstPage] = await pdfDoc.copyPages([0]);
