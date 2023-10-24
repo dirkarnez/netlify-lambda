@@ -14,7 +14,7 @@ exports.handler = async function () {
  const pdfDoc = await PDFDocument.load(arrayBuffer);
 
  // Fetch the first page of the PDF
- const [firstPage] = await pdfDoc.copyPages([0]);
+ const firstPage = await pdfDoc.getPage(0);
 
  // Rotate the page if needed
  firstPage.setRotation(degrees(0));
